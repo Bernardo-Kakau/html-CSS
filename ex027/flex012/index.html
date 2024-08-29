@@ -8,26 +8,55 @@
         div.conteiner{
             background-color: lightsalmon;
             display: flex;
-            flex-direction:row;
+            flex-flow:row nowrap;
         }
         div.item{
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;
-            padding: 10px;
+            padding: 250px;
 
         }
+        div#cxA{
+         /*flex-shrink: 1;
+         flex-grow: 0;
+         flex-basis:200px; */
+
+         flex: 1 0 200px;
+        }
+        div#cxB{
+        /*flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis:200px;*/
+        
+        flex: 1 1 150px
+        }
+        div#cxC{
+        /* flex-shrink:8;
+        flex-grow:1;
+        flex-basis:auto;*/
+
+        flex: 1 8 auto;
+        }
+        /*valor padrão de flex-basis:auto;
+          valor padrão de flex-shrink 
+        */
+    
+        /*flex-basis tamanho do filho(box)
+        flex-grow aumenta de acordo com tamanho BASIS
+        flex-shrink diminuir de acordo com BASIS
+        flex: resumi tudo */
+        /* flex: 0 1 auto; resumir mais ainda usar flex: initial;
+           flex: 0 0 auto; resumir mais ainda usar flex:none;
+           flex: 1 1 auto: resumir mais ainda usar flex:auto;
+        */
     </style>
 </head>
 <body>
     <div class="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
     </div>
 </body>
 </html>
